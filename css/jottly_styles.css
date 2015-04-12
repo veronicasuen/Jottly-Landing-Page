@@ -1,0 +1,288 @@
+@import url(jottly_reset.css);
+@import url(jottly_csswizardry-grids.css);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: #f8fcfe;
+  font-family: "Open Sans", helvetica, serif;
+  margin: 0 auto; }
+
+section {
+  margin: 30px 0; }
+
+h1 {
+  font-size: 42px;
+  line-height: 63px;
+  margin: 42px; }
+
+h2 {
+  font-size: 36px;
+  line-height: 54px;
+  margin: 36px; }
+
+h3 {
+  font-size: 30px;
+  line-height: 45px;
+  margin: 30px; }
+
+h4, .featuresHeading p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 18px; }
+
+h1, h2, h3 {
+  font-family: "Playfair Display", georgia, serif;
+  color: #131b20; }
+
+h4, .featuresHeading p {
+  font-family: "Merriweather", georgia, serif; }
+
+p, ul {
+  font-family: "Open Sans", helvetica, serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 18px;
+  color: #666666; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+input {
+  background-color: #ffffff;
+  border: 1px solid #131b20;
+  color: #666666;
+  font-size: 1.25em;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  width: 100%; }
+
+button {
+  background-color: #131b20;
+  border: none;
+  color: #f8fcfe;
+  font-family: "Merriweather", georgia, serif;
+  font-size: 1.25em;
+  font-style: italic;
+  font-weight: 700;
+  padding: 15px 30px;
+  margin: 15px; }
+  button:hover {
+    background-color: #a31b00; }
+
+.textCenter {
+  text-align: center; }
+
+.objectCenter {
+  margin: 0 auto; }
+
+.highlight {
+  color: #a31b00;
+  font-weight: 700; }
+
+header {
+  background-image: url("../images/headerBG.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.headerGradient {
+  padding: 150px 0 0 0;
+  background: -webkit-linear-gradient(bottom, #f8fcfe 0%, rgba(255, 0, 0, 0) 45%);
+  background: -moz-linear-gradient(bottom, #f8fcfe 0%, rgba(255, 0, 0, 0) 45%);
+  background: linear-gradient(bottom, #f8fcfe 0%, rgba(255, 0, 0, 0) 45%); }
+
+.featuresHeading p {
+  color: #666666; }
+
+.featuresInfo {
+  background-color: #131b20;
+  margin: 60px 0 30px; }
+  .featuresInfo h4, .featuresInfo .featuresHeading p, .featuresHeading .featuresInfo p, .featuresInfo p {
+    color: #f8fcfe; }
+
+.featureOne,
+.featureThree {
+  margin: 5px 0;
+  padding: 30px;
+  position: relative; }
+
+.featureTwo {
+  padding: 30px;
+  position: relative; }
+
+.testimonials img {
+  border-top: 2px solid #a31b00;
+  border-bottom: 2px solid #a31b00;
+  margin: 30px;
+  padding: 0; }
+
+.cta input {
+  font-size: 1.2em;
+  padding: 15px; }
+
+footer {
+  color: #f8fcfe;
+  font-family: "Open Sans", helvetica, serif;
+  padding: 30px 15px;
+  min-height: 150px;
+  background: -webkit-linear-gradient(bottom, #000000 0%, #131b20 55%);
+  background: -moz-linear-gradient(bottom, #000000 0%, #131b20 55%);
+  background: linear-gradient(bottom, #000000 0%, #131b20 55%);
+  background-color: #131b20; }
+  footer p,
+  footer ul,
+  footer li {
+    color: #f8fcfe; }
+  footer li {
+    display: inline; }
+  footer a {
+    color: #f8fcfe;
+    text-decoration: none; }
+    footer a:hover {
+      text-decoration: underline; }
+
+#copyright {
+  text-align: right; }
+
+@media screen and (max-width: 749px) {
+  section {
+    margin: 15px 0; }
+
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 24px; }
+
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 30px; }
+
+  h3 {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 30px; }
+
+  h4, .featuresHeading p {
+    font-size: 22px;
+    line-height: 30px;
+    margin: 22px; }
+
+  input,
+  button {
+    font-size: 18px;
+    margin: 7.5px; }
+
+  .headerGradient {
+    padding-top: 15px; }
+
+  .logo {
+    width: 50%; }
+
+  .cta input {
+    font-size: 0.9em; }
+
+  footer {
+    text-align: center; }
+    footer li {
+      display: block; }
+
+  #copyright {
+    text-align: center; } }
+@media screen and (max-width: 959px) {
+  .headerGradient {
+    padding-top: 45px; }
+
+  .featuresInfo {
+    background-color: #f8fcfe;
+    margin: 15px 0; }
+
+  .featureOne,
+  .featureThree {
+    padding-left: 54px; }
+
+  .featureTwo {
+    padding: 30px;
+    margin: 0; }
+
+  .featureOne,
+  .featureThree,
+  .featuresContainer {
+    background: -webkit-linear-gradient(90deg, #000000 0%, #131b20, 25%, #131b20, 95%, #000000 100%);
+    background: -moz-linear-gradient(90deg, #000000 0%, #131b20, 25%, #131b20, 95%, #000000 100%);
+    background: linear-gradient(90deg, #000000 0%, #131b20, 25%, #131b20, 95%, #000000 100%);
+    background-color: #131b20; }
+
+  .testimonials img {
+    margin: 15px 0; } }
+@media screen and (min-width: 960px) {
+  .contentContainer {
+    margin: 0 auto;
+    max-width: 1000px; }
+
+  .featuresInfo {
+    padding-left: 24px; }
+
+  .featuresContainer {
+    padding: 0;
+    background-color: #f8fcfe; }
+
+  .featuresCornerContainer {
+    padding: 0;
+    margin: 0; }
+
+  .featureTwo {
+    background-color: #131b20;
+    bottom: 30px;
+    padding-bottom: 0;
+    z-index: 2; }
+
+  .featuresCorners {
+    bottom: -30px;
+    height: 0;
+    padding: 0;
+    position: relative;
+    width: 0; }
+
+  .featureTwoLeftCorner {
+    border-top: 30px solid #666666;
+    border-left: 30px solid #000000;
+    left: -30px; }
+
+  .featureTwoRightCorner {
+    border-top: 30px solid #666666;
+    border-right: 30px solid #000000;
+    float: right;
+    right: -30px; }
+
+  .featureOne,
+  .featureTwo,
+  .featureThree {
+    margin: 0; }
+
+  .featureOne {
+    background: -webkit-linear-gradient(to left, #000000 0%, #131b20 25%);
+    background: -moz-linear-gradient(to left, #000000 0%, #131b20 25%);
+    background: linear-gradient(to left, #000000 0%, #131b20 25%);
+    background-color: #131b20; }
+
+  .featureTwo {
+    background-color: #131b20; }
+
+  .featureThree {
+    background: -webkit-linear-gradient(to right, #000000 0%, #131b20 25%);
+    background: -moz-linear-gradient(to right, #000000 0%, #131b20 25%);
+    background: linear-gradient(to right, #000000 0%, #131b20 25%);
+    background-color: #131b20; }
+
+  .cta input {
+    padding: 7.5px; }
+  .cta input,
+  .cta button {
+    font-size: 16px; } }
+
+/*# sourceMappingURL=jottly_styles.css.map */

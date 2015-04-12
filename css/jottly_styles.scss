@@ -1,0 +1,433 @@
+@import "jottly_reset.css";
+@import "jottly_csswizardry-grids.css";
+
+//+---- VARIABLES ----+
+
+// +-- Fonts --+
+$headings: 'Playfair Display', georgia, serif;
+$subheadings: 'Merriweather', georgia, serif;
+$bodyText: 'Open Sans', helvetica, serif;
+
+// +-- Colours --+
+$colorPrimary: #131b20;
+$colorSecondary: #f8fcfe;
+$colorTertiary: #a31b00;
+$colorBodyText: #666666;
+$colorInputBG: #ffffff;
+
+$baseUnit: 15px;
+$gutterWidth: 24px;
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+//+---- MIXINS ----+
+@mixin linear-gradient($direction,$startColor,$startColorPercentage,$endColor,$endColorPercentage) {
+	background: -webkit-linear-gradient($direction,$startColor $startColorPercentage,$endColor $endColorPercentage);
+	background: -moz-linear-gradient($direction,$startColor $startColorPercentage,$endColor $endColorPercentage);
+	background: linear-gradient($direction,$startColor $startColorPercentage,$endColor $endColorPercentage);
+}
+
+@mixin linear-gradient-three-colors($direction,$startColor,$startColorPercentage,$midColor, $midColorPercentage,$mid2Color, $mid2ColorPercentage, $endColor,$endColorPercentage) {
+	background: -webkit-linear-gradient($direction,$startColor $startColorPercentage,$midColor, $midColorPercentage,$mid2Color, $mid2ColorPercentage,$endColor $endColorPercentage);
+	background: -moz-linear-gradient($direction,$startColor $startColorPercentage,$midColor, $midColorPercentage,$mid2Color, $mid2ColorPercentage,$endColor $endColorPercentage);
+	background: linear-gradient($direction,$startColor $startColorPercentage,$midColor, $midColorPercentage,$mid2Color, $mid2ColorPercentage,$endColor $endColorPercentage);
+}
+
+//+---- CSS STARTS HERE ----+
+
+// -- GENERAL --
+body {
+	background-color: $colorSecondary;
+	font-family: $bodyText;
+	margin: 0 auto;
+}
+
+section {
+	margin: $baseUnit*2 0;
+}
+
+// -- TEXT --
+
+h1 {
+	font-size: 42px;
+	line-height: 63px;
+	margin: 42px;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 54px;
+	margin: 36px;
+}
+
+h3 {
+	font-size: 30px;
+	line-height: 45px;
+	margin: 30px;
+}
+
+h4 {
+	font-size: 18px;
+	line-height: 27px;
+	margin: 18px;
+}
+
+
+h1, h2, h3 {
+	font-family: $headings;
+	color: $colorPrimary;
+	
+}
+
+h4 {
+	font-family: $subheadings;
+}
+
+p, ul {
+	font-family: $bodyText;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 18px;
+	color: $colorBodyText;
+}
+
+// -- IMAGES --
+
+img {
+	max-width: 100%;
+	height:auto;
+}
+
+// -- FORM ELEMENTS --
+
+input {
+	background-color: $colorInputBG;
+	border: 1px solid $colorPrimary;
+	color: $colorBodyText;
+	font-size: 1.25em;
+	margin: $baseUnit;
+	padding: $baseUnit ($baseUnit * 2);
+	text-align: center;
+	width: 100%;	
+}
+
+button {
+	background-color: $colorPrimary;
+	border: none;
+	color: $colorSecondary;
+	font-family: $subheadings;
+	font-size: 1.25em;
+	font-style: italic;
+	font-weight: 700;
+	padding: $baseUnit ($baseUnit * 2);
+	margin: $baseUnit;
+
+	&:hover {
+		background-color: $colorTertiary;
+	}
+}
+
+
+// -- MISC --
+
+.textCenter{
+	text-align: center; 
+}
+
+.objectCenter{
+	margin: 0 auto;
+}
+
+.highlight {
+	color: $colorTertiary;
+	font-weight: 700;
+}
+
+// +-- HEADER --+
+
+header {
+	background-image: url("../images/headerBG.jpg");
+	background-size: cover;
+	background-position: center;
+
+}
+
+.headerGradient {
+	padding: ($baseUnit * 10) 0 0 0;
+	@include linear-gradient(bottom, $colorSecondary, 0%, rgba(255,0,0,0), 45%);
+}
+
+
+
+// -- FEATURES --
+.featuresHeading {
+	p {
+		@extend h4;
+		color: $colorBodyText;
+	}
+}
+
+.featuresInfo {
+	background-color: $colorPrimary;
+	margin: $baseUnit*4 0 $baseUnit*2;
+
+	h4, p {
+		color: $colorSecondary;
+	}
+}
+
+.featureOne,
+.featureThree {
+	margin: $baseUnit/3 0;
+	padding: $baseUnit*2;
+	position: relative;
+}
+
+.featureTwo {
+	padding: $baseUnit*2;
+	position: relative;
+}
+
+// -- TESTIMONIALS --
+
+.testimonials {
+	img {
+		border-top: 2px solid $colorTertiary;
+		border-bottom: 2px solid $colorTertiary;
+		margin: $baseUnit*2;
+		padding: 0;
+	}
+}
+
+// -- CTA --
+
+.cta {
+	input {
+		font-size: 1.2em;
+		padding: $baseUnit;
+	}
+}
+
+// -- FOOTER --
+
+footer {
+	color: $colorSecondary;
+	font-family: $bodyText;
+	padding: ($baseUnit * 2) $baseUnit;
+	min-height: $baseUnit * 10;
+
+	@include linear-gradient(bottom, #000000, 0%, $colorPrimary, 55%);
+	background-color: $colorPrimary;
+
+	p,
+	ul,
+	li {
+		color: $colorSecondary;
+	}
+
+	li {
+		display: inline;
+	}
+
+	a {
+		color: $colorSecondary;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+#copyright {
+	text-align: right;
+}
+
+// +- MEDIA SIZES -+
+
+// -- SMALL SCREENS
+@media screen and (max-width: 749px) {
+	section {
+		margin: $baseUnit 0;
+	}
+
+	h1 {
+		font-size: 36px;
+		line-height: 42px;
+		margin: 24px;
+	}
+
+	h2 {
+		font-size: 30px;
+		line-height: 40px;
+		margin: 30px;
+	}
+
+	h3 {
+		font-size: 30px;
+		line-height: 40px;
+		margin: 30px;
+	}
+
+	h4 {
+		font-size: 22px;
+		line-height: 30px;
+		margin: 22px;
+	}
+
+	input,
+	button {
+		font-size: 18px;
+		margin: $baseUnit/2;
+	}
+	
+	.headerGradient {
+		padding-top: $baseUnit;
+	}
+
+	.logo {
+		width: 50%;
+	}
+
+	.cta {
+		input {
+			font-size: 0.9em;
+		}
+	}
+
+	footer {
+		text-align: center;
+
+		li {
+			display: block;
+		}
+	}
+
+	#copyright {
+		text-align: center;
+	}
+}
+
+// -- MEDIUM SCREENS
+@media screen and (max-width: 959px) {
+
+	.headerGradient {
+		padding-top: $baseUnit*3;
+	}
+
+	.featuresInfo {
+		background-color: $colorSecondary;
+		margin: $baseUnit 0;
+	}
+
+	.featureOne, 
+	.featureThree, {
+		padding-left: $baseUnit*2+$gutterWidth;
+	}
+
+	.featureTwo {
+		padding: $baseUnit*2;
+		margin: 0;
+	}
+
+	.featureOne, 
+	.featureThree, 
+	.featuresContainer {
+		@include linear-gradient-three-colors(90deg, #000000, 0%, $colorPrimary, 25%, $colorPrimary, 95%, #000000, 100%);
+		background-color: $colorPrimary;
+	}
+
+	.testimonials {
+		img {
+			margin: $baseUnit 0;
+		}
+	}
+}
+
+// -- LARGE SCREENS
+@media screen and (min-width: 960px) {
+
+	.contentContainer {
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+
+	.featuresInfo {
+		padding-left: $gutterWidth;
+	}
+
+	//--- CORNER BUMPS --
+
+	.featuresContainer{ 
+		padding:0;
+		background-color: $colorSecondary;
+	}
+
+	.featuresCornerContainer {
+		padding: 0;
+		margin: 0;
+	}
+
+	.featureTwo{
+		background-color: $colorPrimary;
+		bottom: $baseUnit*2;
+		padding-bottom: 0;
+		z-index: 2;
+	}
+
+	.featuresCorners{
+		bottom: -$baseUnit*2;
+		height:0;
+		padding: 0;
+		position:relative;
+		width:0;
+	}
+
+	.featureTwoLeftCorner{
+		border-top: $baseUnit*2 solid $colorBodyText;
+		border-left: $baseUnit*2 solid #000000;
+		left: -$baseUnit*2;
+	}
+
+	.featureTwoRightCorner{
+		border-top: $baseUnit*2 solid $colorBodyText;
+		border-right: $baseUnit*2 solid #000000;
+		float: right;
+		right: -$baseUnit*2;
+	}
+
+	.featureOne, 
+	.featureTwo, 
+	.featureThree {
+		margin: 0;
+	}
+
+	.featureOne {
+		@include linear-gradient(to left, #000000, 0%, $colorPrimary, 25%);
+		background-color: $colorPrimary;
+	}
+
+	.featureTwo{
+		background-color: $colorPrimary;
+	}
+
+	.featureThree {
+		@include linear-gradient(to right, #000000, 0%, $colorPrimary, 25%);
+		background-color: $colorPrimary;
+	}
+
+	.cta {
+		input {
+			padding: $baseUnit/2;
+		}
+		input,
+		button {
+			font-size: 16px;
+		}
+	}
+
+}
